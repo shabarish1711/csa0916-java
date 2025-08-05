@@ -1,0 +1,28 @@
+Exception Demo
+public class R192424007{
+    public static void main(String[] args) {
+        try {
+            int a = 10;
+            int b = 10;
+            int result = a / b;
+            System.out.println("Result: " + result);
+
+            int[] numbers = {1, 2, 3};
+            System.out.println("Number at index 5: " + numbers[5]);
+        } 
+        catch (ArithmeticException e) {
+            System.out.println("Arithmetic Exception caught: " + e.getMessage());
+        } 
+        catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Array Index Out of bounds exception caught: " + e.getMessage());
+        }
+        catch (Exception e) {
+            System.out.println("Some other exception caught: " + e.getMessage());
+        }
+
+        System.out.println("Program continues after exception handling.");
+    }
+}
+output:
+Result: 1
+Array Index Out of bounds exception caught: Index 5 out of bounds for length 3Program continues after exception handling.
